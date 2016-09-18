@@ -106,7 +106,7 @@ class printer(object):
 		if prev_time_delta == 0:
 			pass
 		else:
-			user_dict['differential_rating'] = user_dict['differencial_rating'] + delta_rating
+			user_dict['differential_rating'] = user_dict['differential_rating'] + delta_rating
 		return user_dict
 
 	def process_request(self, request):
@@ -141,6 +141,7 @@ class printer(object):
 		self.all_user_dict[user_address] = user_dict
 		self.all_user_dict[user_address] = self.rate_the_user(user_dict)
 		self.time_measure[request] = time.time()
+		print all_user_dict
 		if user_dict['status'] == 0:
 			return HttpResponse("User Blocked!!! Please contact administrator to unblock")
 		return None
