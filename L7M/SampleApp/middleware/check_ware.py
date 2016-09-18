@@ -106,7 +106,7 @@ class printer(object):
 		if prev_time_delta == 0:
 			pass
 		else:
-			user_dict['differential_rating'] = user_dict['differential_rating'] + delta_rating
+			user_dict['differencial_rating'] = user_dict['differencial_rating'] + delta_rating
 		return user_dict
 
 	def process_request(self, request):
